@@ -244,7 +244,7 @@ public class TestsAmitalSort {
 		// Проверяем, что перешли на сортированную страницу
 		assertEquals(CATEGORY_URL_GAMES, driver.getCurrentUrl(), INCORRECT_URL);
 
-		// Шаг 3: Выбор сортировки "Сперва новинки"
+		// Шаг 3: Выбор сортировки "Сперва товары со скидками"
 		WebElement sortMenu = getWebElementByLinkText(SORT_DEFAULT_TEXT);
 		sortMenu.click();
 		sortMenu.click();
