@@ -56,6 +56,8 @@ public class TestsAmitalSort {
 	private static final String INCORRECT_URL = "URL страницы категории некорректен.";
 	private static final String INCORRECT_RESULT_PRODUCT_NAME = "Названия продуктов не совпадают";
 
+	private static final String BASE_PRODUCT_CSS_SELECTOR = "div.product-name span[itemprop='name']";
+
 
 	@BeforeEach
 	public void setUp() {
@@ -310,7 +312,7 @@ public class TestsAmitalSort {
 
 	private String getFirstElemName() {
 		return wait.until(ExpectedConditions.visibilityOfElementLocated(
-				By.cssSelector("div.product-name span[itemprop='name']")
+				By.cssSelector(BASE_PRODUCT_CSS_SELECTOR)
 		)).getText();
 	}
 
